@@ -1,5 +1,4 @@
 while true do
-	game.Workspace[game.Players.LocalPlayer.Name].Humanoid.WalkSpeed = 32
     for i, o in pairs(game.Workspace:GetChildren()) do
         if o:FindFirstChild("Humanoid") then
             if o.Name ~= game.Players.LocalPlayer.Name then
