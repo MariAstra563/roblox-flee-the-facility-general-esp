@@ -44,24 +44,6 @@ while true do
                      hl.FillTransparency = 0.25
                     hl.FillColor = Color3.new(1, 1, 0)
                 end
-            elseif o2.Name == "HidingCloset" then
-                if not o2:FindFirstChild("HighlightA") then
-                    local hl = Instance.new("Highlight")
-                    hl.Name = "HighlightA"
-                    hl.Parent = o2
-                    hl.OutlineTransparency = 1
-                     hl.FillTransparency = 0.25
-                    hl.FillColor = Color3.new(0.8, 0.8, 0.8)
-                end
-            elseif o2.Name == "AirVent" then
-                if not o2:FindFirstChild("HighlightA") then
-                    local hl = Instance.new("Highlight")
-                    hl.Name = "HighlightA"
-                    hl.Parent = o2
-                    hl.OutlineTransparency = 1
-                     hl.FillTransparency = 0.25
-                    hl.FillColor = Color3.new(0.8, 0.8, 0.8)
-                end
             end
         end
     end
