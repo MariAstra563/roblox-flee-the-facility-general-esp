@@ -25,17 +25,15 @@ while true do
                 end
             end
         end
-        if o:FindFirstChild("ComputerTable") then
-            for i2, o2 in pairs(o:GetChildren()) do
-                if o2.Name == "ComputerTable" then
-                    if not o2:FindFirstChild("HighlightA") then
-                        local hl = Instance.new("Highlight")
-                        hl.Name = "HighlightA"
-                        hl.Parent = o2
-                        hl.OutlineTransparency = 1
-                        hl.FillTransparency = 0.25
-                        hl.FillColor = Color3.new(0, 0, 1)
-                    end
+        for i2, o2 in pairs(o:GetChildren()) do
+            if o2.Name == "ComputerTable" or o2.Name == "ExitDoor" then
+                if not o2:FindFirstChild("HighlightA") then
+                    local hl = Instance.new("Highlight")
+                    hl.Name = "HighlightA"
+                    hl.Parent = o2
+                    hl.OutlineTransparency = 1
+                     hl.FillTransparency = 0.25
+                    hl.FillColor = Color3.new(0, 0, 1)
                 end
             end
         end
