@@ -51,7 +51,7 @@ while true do
                     hl.Parent = o2
                     hl.OutlineTransparency = 1
                      hl.FillTransparency = 0.25
-                    hl.FillColor = Color3.new(0.5, 0.5, 0.5)
+                    hl.FillColor = Color3.new(0.8, 0.8, 0.8)
                 end
             elseif o2.Name == "AirVent" then
                 if not o2:FindFirstChild("HighlightA") then
@@ -60,7 +60,7 @@ while true do
                     hl.Parent = o2
                     hl.OutlineTransparency = 1
                      hl.FillTransparency = 0.25
-                    hl.FillColor = Color3.new(0.5, 0.5, 0.5)
+                    hl.FillColor = Color3.new(0.8, 0.8, 0.8)
                 end
             end
         end
