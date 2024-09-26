@@ -14,7 +14,7 @@ local function make_highlight(parent, color)
     hl.Name = "HighlightA"
     hl.Parent = parent
     hl.OutlineTransparency = 1
-    hl.FillTransparency = 0.25
+    hl.FillTransparency = 0.8
     hl.FillColor = color
 end
 
@@ -32,13 +32,17 @@ rs.RenderStepped:Connect(function()
             make_highlight(char, Color3.new(0, 1, 0))
         end
 
-        for i, o in pairs(game.Workspace:GetDescendants()) do
-            if o.Name == "ComputerTable" then
-                make_highlight(o, Color3.new(0, 1, 1))
-            elseif o.Name == "ExitDoor" then
-                make_highlight(o, Color3.new(1, 1, 0))
-            elseif o.Name == "FreezePod" then
-                make_highlight(o, Color3.new(1, 0, 0.5))
+        for _, part in pairs(game.Workspace:GetChildren()) do
+            if not part:IsA("Folder")
+
+            for _, prop in pairs(part:GetChildren()) do
+                if prop.Name == "ComputerTable" then
+                    make_highlight(o, Color3.new(0, 1, 1))
+                elseif prop.Name == "ExitDoor" then
+                    make_highlight(o, Color3.new(1, 1, 0))
+                elseif prop.Name == "FreezePod" then
+                    make_highlight(o, Color3.new(1, 0, 0.5))
+                end
             end
         end
     end
