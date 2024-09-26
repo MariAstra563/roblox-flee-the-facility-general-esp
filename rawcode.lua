@@ -14,7 +14,7 @@ local function make_highlight(parent, color)
     hl.Name = "HighlightA"
     hl.Parent = parent
     hl.OutlineTransparency = 1
-    hl.FillTransparency = 0.25
+    hl.FillTransparency = 0.8
     hl.FillColor = color
 end
 
@@ -33,7 +33,7 @@ rs.RenderStepped:Connect(function()
         end
 
         for _, part in pairs(game.Workspace:GetChildren()) do
-            if part:IsA("Model") then
+            if part:IsA("Folder") then
                 for _, prop in pairs(part:GetChildren()) do
                     if prop.Name == "ComputerTable" then
                         make_highlight(prop, Color3.new(0, 1, 1))
