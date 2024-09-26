@@ -14,7 +14,7 @@ local function make_highlight(parent, color)
     hl.Name = "HighlightA"
     hl.Parent = parent
     hl.OutlineTransparency = 1
-    hl.FillTransparency = 0.75
+    hl.FillTransparency = 0.25
     hl.FillColor = color
 end
 
@@ -37,6 +37,8 @@ rs.RenderStepped:Connect(function()
                 make_highlight(o, Color3.new(0, 1, 1))
             elseif o.Name == "ExitDoor" then
                 make_highlight(o, Color3.new(1, 1, 0))
+            elseif o.Name == "FreezePod" then
+                make_highlight(o, Color3.new(1, 0, 0.5))
             end
         end
     end
