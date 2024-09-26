@@ -14,7 +14,7 @@ local function make_highlight(parent, color)
     hl.Name = "HighlightA"
     hl.Parent = parent
     hl.OutlineTransparency = 1
-    hl.FillTransparency = 0.25
+    hl.FillTransparency = 0.75
     hl.FillColor = color
 end
 
